@@ -1,19 +1,34 @@
 bool armed = false;
+bool sirenOn = false;
+bool warningOn = false;
+long warningMillis = 0;
 
 void setup() {
   pinMode(32, OUTPUT); // set siren pin to output
+  pinMode(15, OUTPUT); // set beeper pin to output
   pinMode(27, INPUT); // set PIR pin to input
   // setup I/O config for smoke detection here
 }
 
 void loop() {
   if (isThereSmoke()) {
-    activateSiren();
+    sirenOn = true;
   }
   if (armed) {
     if (isThereMotion()) {
-      
+      warningMillis = millis();
+      warningOn = true;
     }
+  }
+  if (warningOn) {
+    activateBeeper();
+  }
+  if (millis() - warningMillis > 30000 && warningOn) {
+    sirenOn = true;
+    warningOn = false;
+  }
+  if (sirenOn) {
+    activateSiren();
   }
 }
 
@@ -25,7 +40,7 @@ bool isThereSmoke() {
 
 bool isThereMotion() {
   bool inverted = false; // If when you read no motion you read HIGH and when when you read motion you read LOW, set this to true
-  return inverted ^ digitalRead(27); // A fancy way to say inverted XOR 27
+  return inverted ^ digitalRead(27); // A fancy way to say inverted XOR digitalRead(27)
 }
 
 void activateSiren() {
@@ -37,4 +52,9 @@ void activateSiren() {
     tone(32, i, 20);
     delay(20);
   }
+}
+
+void activateBeeper() {
+  tone(15, 2000, 500);
+  delay(1000);
 }
