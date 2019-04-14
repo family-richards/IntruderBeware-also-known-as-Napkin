@@ -1,0 +1,33 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=NapkinFire
+*Date=18:38:10
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;;44.5331;-14.8584;0;Bottom;Via3
+2;;;51.4905;-15.4769;0;Bottom;Via4
+3;;;14.655;-31.12;90;Bottom;Part1
+4;;;51.5864;-57.5898;-90;Bottom;TXT1
+5;;;41.3519;-58.1981;-90;Bottom;TXT1
+6;;;54.1321;-57.6115;-90;Bottom;TXT1
+7;;THT;47.6749;-45.3496;0;Bottom;J69
+8;;;43.7951;-58.1753;-90;Bottom;TXT1
+9;;;48.8841;-32.6518;0;Bottom;Via1
+10;;;53.3624;-14.2747;0;Bottom;Via2
+11;;THT;42.5949;-45.3496;0;Bottom;J68
+12;;;55.9299;-6.61455;0;Bottom;PIR1
+13;;;11.4799;-5.34455;0;Bottom;J65
+14;;THT;45.1349;-26.2996;-90;Bottom;J71
+15;;THT;37.5149;-45.3496;0;Bottom;J67
+16;;;46.4263;-57.9335;-90;Bottom;TXT1
+17;;THT;52.7549;-45.3496;0;Bottom;J70
+18;;buzzer-12mm-ns;40.3127;-13.1303;0;Bottom;SG1
