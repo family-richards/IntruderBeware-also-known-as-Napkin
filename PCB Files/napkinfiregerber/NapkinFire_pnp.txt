@@ -15,7 +15,6 @@
 *No;Value;Package;X;Y;Rotation;Side;Name
 1;;;27.3549;-16.7746;0;Bottom;Via7
 2;;;57.8294;-14.24;0;Bottom;Via19
-3;220;0805 [SMD];58.4699;-48.9146;-90;Top;JMPR
 4;;THT;45.1349;-28.8396;-90;Bottom;Arducam
 5;;buzzer-12mm;39.98;-11.0595;0;Bottom;beeper
 6;;THT;43.8649;-45.3496;0;Bottom;J2
