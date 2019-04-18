@@ -1,10 +1,16 @@
+#include "EEPROM.h"
+#define EEPROM_SIZE 16
 void setup() {
   while(!Serial);
   Serial.begin(9600);
-  Serial.println("Welcome to the IntruderBeware setup wizard! Wait a moment as I setup the inputs and outputs...");
+  Serial.println("Welcome to the IntruderBeware setup wizard! Wait a moment as I setup the inputs, outputs, and EEPROM...");
   pinMode(27, INPUT);
   pinMode(32, OUTPUT);
   pinMode(15, OUTPUT);
+  if (!EEPROM.begin(EEPROM_SIZE)){
+    Serial.println("Failed to initialise EEPROM!");
+    while(true);
+  }
   Serial.println("Done! First, let's setup your PIR. Go behind your PIR, so it can't see you. In five seconds, I'll take 10 snapshots of the PIR pin.");
   delay(5000);
   Serial.println("Taking shapshots...");
@@ -32,9 +38,11 @@ void setup() {
   }
   Serial.println("Hmm... let me figure out if your PIR is reverse...");
   if (onSnaps > offSnaps && onSnapsMotion < offSnapsMotion) {
-    Serial.println("It's reverse!");
+    Serial.println("It's reverse! Give me a second to save that...");
+    EEPROM.write(0, 1);
   } else if (onSnaps < offSnaps && onSnapsMotion > offSnapsMotion) {
-    Serial.println("It's not reverse!");
+    Serial.println("It's not reverse! Give me a second to save that...");
+    EEPROM.write(0, 0);
   } else {
     Serial.println("Hmm... I'm having trouble. Try again by resetting this, and put up a issue on GitHub.");
     while(true);
@@ -50,6 +58,7 @@ void setup() {
   Serial.println("Did you hear the tones? y/n");
   checkWords:
   while(!Serial.available());
+  delay(100);
   if (Serial.peek() == 'y') {
     Serial.println("Great!");
   } else if (Serial.peek() == 'n') {
@@ -67,6 +76,7 @@ void setup() {
     Serial.println("Did you hear the tone? y/n");
   checkWordsSiren:
   while(!Serial.available());
+  delay(100);
   if (Serial.peek() == 'y') {
     Serial.println("Great!");
   } else if (Serial.peek() == 'n') {
@@ -77,7 +87,12 @@ void setup() {
     goto checkWordsSiren;
   }
   while (Serial.available()) {Serial.read();}
-  Serial.println("Let's try 
+  Serial.println("Let's try testing your NeoPixels. How many NeoPixels are in your strip? (I would discourage more than 25.)");
+  while (!Serial.available());
+  delay(100);
+  int neoPixels = Serial.parseInt();
+  Serial.println("Let me save that...");
+  EEPROM.write(1, neoPixels);
 }
 
 void loop() {
