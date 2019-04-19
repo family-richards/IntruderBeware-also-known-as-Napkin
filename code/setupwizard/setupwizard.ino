@@ -1,5 +1,7 @@
 #include "EEPROM.h"
+#include <Adafruit_NeoPixel.h>
 #define EEPROM_SIZE 16
+Adafruit_Neopixel strippy;
 void setup() {
   while(!Serial);
   Serial.begin(9600);
@@ -59,9 +61,11 @@ void setup() {
   checkWords:
   while(!Serial.available());
   delay(100);
-  if (Serial.peek() == 'y') {
+  String firstChar = String(Serial.read());
+  firstChar.toLowerCase();
+  if (firstChar == 'y') {
     Serial.println("Great!");
-  } else if (Serial.peek() == 'n') {
+  } else if (firstChar == 'n') {
     Serial.println("Hmm... try making a issue on GitHub.");
   } else {
     while (Serial.available()) {Serial.read();}
@@ -73,13 +77,15 @@ void setup() {
   delay(5000);
   // TODO: figure out if you use tone(32, 2000, 1000) or digitalWrite(32, HIGH)
   // put code to test siren here
-    Serial.println("Did you hear the tone? y/n");
+  Serial.println("Did you hear the tone? y/n");
   checkWordsSiren:
   while(!Serial.available());
   delay(100);
-  if (Serial.peek() == 'y') {
+  String firstChar = String(Serial.read());
+  firstChar.toLowerCase();
+  if (firstChar == 'y') {
     Serial.println("Great!");
-  } else if (Serial.peek() == 'n') {
+  } else if (firstChar == 'n') {
     Serial.println("Hmm... try making a issue on GitHub.");
   } else {
     while (Serial.available()) {Serial.read();}
@@ -93,8 +99,52 @@ void setup() {
   int neoPixels = Serial.parseInt();
   Serial.println("Let me save that...");
   EEPROM.write(1, neoPixels);
+  Serial.println("Okay, now I have some more questions. First, are your NeoPixels RGBW or RGB?");
+  checkWordsNeopixels:
+  while(!Serial.available());
+  delay(100);
+  String retval = Serial.readString();
+  retval.toLowerCase();
+  if (retval == "rgb") {
+    Serial.println("Great! Now, second: Are your NeoPixels V1 or V2?");
+    checkWordsRGBVersion:
+    while(!Serial.available());
+    delay(100);
+    String retval = Serial.readString();
+    retval.toLowerCase();
+    if (retval == "v1") {
+      Serial.println("The settings are found! Give me a second to save them...");
+      EEPROM.writeUShort(2, NEO_KHZ400+NEO_RGB);
+    } else if (retval == "v2") {
+      Serial.println("The settings are found! Give me a second to save them...");
+      EEPROM.writeUShort(2, NEO_KHZ800+NEO_GRB);
+    } else {
+      Serial.println("Please type V1 or V2.");
+      goto checkWordsRGBVersion;
+    }
+  } else if (retval == "rgbw") {
+    Serial.println("The settings are found! Give me a second to save them...");
+    EEPROM.writeUShort(2, NEO_KHZ800+NEO_RGBW);
+  } else {
+    Serial.println("Please type RGBW or RGB.");
+    goto checkWordsNeopixels;
+  }
+  Serial.println("Now, let's test your NeoPixels. Give me a second to set them up...");
+  strip = Adafruit_NeoPixel(EEPROM.read(1), 4, EEPROM.readUShort(2));
+  Serial.println("Done! You should see all of them turn red, then green, then blue.");
+  colorWipe(strip.color(255, 0, 0), 2000/strip.numPixels());
+  colorWipe(strip.color(0, 255, 0), 2000/strip.numPixels());
+  colorWipe(strip.color(0, 0, 255), 2000/strip.numPixels());
+  Serial.println("Did that work? Type y or n.");
 }
 
 void loop() {
   
+}
+void colorWipe(uint32_t c, uint16_t wait) {
+  for(uint16_t i=0; i<strip.numPixels(); i++) {
+    strip.setPixelColor(i, c);
+    strip.show();
+    delay(wait);
+  }
 }
