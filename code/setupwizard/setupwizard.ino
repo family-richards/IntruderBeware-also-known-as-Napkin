@@ -150,7 +150,7 @@ void colorWipe(uint32_t c, uint16_t wait) {
   }
 }
 
-void buzz(int frequency, uint_16t time) {
+void buzz(int frequency, uint16_t time) {
   for (int i = 0; i < time/(1000000/frequency*2); i++) {
     digitalWrite(15, LOW);
     delayMicroseconds(1000000/frequency);
