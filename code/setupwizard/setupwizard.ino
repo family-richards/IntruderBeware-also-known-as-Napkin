@@ -1,7 +1,7 @@
 #include "EEPROM.h"
 #include <Adafruit_NeoPixel.h>
 #define EEPROM_SIZE 16
-Adafruit_Neopixel strippy;
+Adafruit_NeoPixel strippy;
 void setup() {
   while(!Serial);
   Serial.begin(9600);
