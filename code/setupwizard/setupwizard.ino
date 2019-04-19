@@ -51,11 +51,11 @@ void setup() {
   }
   Serial.println("Now, let's test the buzzer. In 5 seconds, I'll play a low tone, a medium tone, and then a high tone.");
   delay(5000);
-  tone(15, 1500, 500);
+  buzz(1500, 500);
   delay(500);
-  tone(15, 2000, 500);
+  buzz(2000, 500);
   delay(500);
-  tone(15, 2500, 500);
+  buzz(2500, 500);
   delay(500);
   Serial.println("Did you hear the tones? y/n");
   checkWords:
@@ -150,9 +150,11 @@ void colorWipe(uint32_t c, uint16_t wait) {
   }
 }
 
-void buzz(int frequency) {
-  digitalWrite(15, LOW);
-  delayMicroseconds(1000000/frequency);
-  digitalWrite(15, HIGH);
-  delayMicroseconds(1000000/frequency);
+void buzz(int frequency, uint_16t time) {
+  for (int i = 0; i < time/(1000000/frequency*2); i++) {
+    digitalWrite(15, LOW);
+    delayMicroseconds(1000000/frequency);
+    digitalWrite(15, HIGH);
+    delayMicroseconds(1000000/frequency);
+  }
 }
