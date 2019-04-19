@@ -63,9 +63,9 @@ void setup() {
   delay(100);
   String firstChar = String(Serial.read());
   firstChar.toLowerCase();
-  if (firstChar == 'y') {
+  if (firstChar == "y") {
     Serial.println("Great!");
-  } else if (firstChar == 'n') {
+  } else if (firstChar == "n") {
     Serial.println("Hmm... try making a issue on GitHub.");
   } else {
     while (Serial.available()) {Serial.read();}
