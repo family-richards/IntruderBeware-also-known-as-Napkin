@@ -141,10 +141,15 @@ void setup() {
 void loop() {
   
 }
+
 void colorWipe(uint32_t c, uint16_t wait) {
   for(uint16_t i=0; i<strip.numPixels(); i++) {
     strip.setPixelColor(i, c);
     strip.show();
     delay(wait);
   }
+}
+
+void buzz() {
+  digitalWrite(15, HIGH);
 }
