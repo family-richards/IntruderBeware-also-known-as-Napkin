@@ -12,6 +12,7 @@ A quieter buzzer (you might find this type in electronic kits)
 A smoke detector  
 Something to turn the signal from a smoke detector into something the Feather can understand  
 And that's it! Give yourself a pat on the back.  
+Before you start soldering, remember to not solder the jumper next to the perfboard for the smoke detector until you've cut all of the places that need to be cut in order to make your circuit. Soldering the jumper without cutting any of the traces will create a short circuit. Also, remove the IR filter on the camera.
 Now, begin the laborious task of soldering everything. Don't forget to add the resistors for the IR LEDs.  
 Okay. Now, plug in the ESP32 into your computer. If it works, yay! If it doesn't, immediately unplug the Feather and create an issue on GitHub.  
 Next, follow Adafruit's excellent guide on setting up the Feather, which can be found here: bit.ly/2DkHflr  
