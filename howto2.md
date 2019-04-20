@@ -15,3 +15,16 @@ It'll take a while to install. When it's done, close the window. Now you can fin
   Click on Tools > Board. Scroll down, and under ESP32 Arduino, you should find "Adafruit ESP32 Feather". Click on it! You're so close!  
   Now, press the upload button. It looks like this: ![](upload.png)  
   In a little, your ESP32 Feather should start blinking!  
+  Now, you need to get your PCB. OSHPark makes great PCBs. It's okay that you get 3, because you'll want multiple IntruderBewares to protect your house. You can find pictures of the PCB, the Gerber files, and the .fzz files in the /PCB Files/ directory.
+  Time to go shopping! Here's a list:
++ MicroSD breakout (https://adafru.it/254)
++ NeoPixel strip (https://adafru.it/3636 (cut to size needed))
++ PIR motion sensor (https://adafru.it/189)
++ 3 IR LEDs (https://adafru.it/388)
++ Piezo buzzer (https://adafru.it/160)
++ Speakers with 3-pin (ground, left channel, right channel)
++ 3-pin audio jack (https://adafru.it/2971)
++ Arducam 5MP module (https://bit.ly/2PjWdNe)
+
+  Are you done? Great! Let's start soldering! You'll need to solder at least 63 points.
+1. First, let's solder up the MicroSD breakout. You might want to put it on 1 in. wires. You're already more than 1/10 done!
