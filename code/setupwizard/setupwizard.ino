@@ -130,11 +130,11 @@ void setup() {
     goto checkWordsNeopixels;
   }
   Serial.println("Now, let's test your NeoPixels. Give me a second to set them up...");
-  strip = Adafruit_NeoPixel(EEPROM.read(1), 4, EEPROM.readUShort(2));
+  strippy = Adafruit_NeoPixel(EEPROM.read(1), 4, EEPROM.readUShort(2));
   Serial.println("Done! You should see all of them turn red, then green, then blue.");
-  colorWipe(strip.color(255, 0, 0), 2000/strip.numPixels());
-  colorWipe(strip.color(0, 255, 0), 2000/strip.numPixels());
-  colorWipe(strip.color(0, 0, 255), 2000/strip.numPixels());
+  colorWipe(strippy.color(255, 0, 0), 2000/strippy.numPixels());
+  colorWipe(strippy.color(0, 255, 0), 2000/strippy.numPixels());
+  colorWipe(strippy.color(0, 0, 255), 2000/strippy.numPixels());
   Serial.println("Did that work? Type y or n.");
 }
 
