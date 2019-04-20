@@ -63,6 +63,7 @@ void setup() {
   delay(100);
   String firstChar = String(Serial.read());
   firstChar.toLowerCase();
+  firstChar = String(firstChar.charAt(0));
   if (firstChar == "y") {
     Serial.println("Great!");
   } else if (firstChar == "n") {
@@ -83,6 +84,7 @@ void setup() {
   delay(100);
   firstChar = String(Serial.read());
   firstChar.toLowerCase();
+  firstChar = String(firstChar.charAt(0));
   if (firstChar == "y") {
     Serial.println("Great!");
   } else if (firstChar == "n") {
