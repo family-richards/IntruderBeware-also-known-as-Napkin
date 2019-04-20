@@ -117,6 +117,7 @@ void setup() {
     delay(100);
     String retval = Serial.readString();
     retval.toLowerCase();
+    retval.trim();
     while (Serial.available()) {Serial.read();}
     if (retval == "v1") {
       Serial.println("The settings are found! Give me a second to save them...");
