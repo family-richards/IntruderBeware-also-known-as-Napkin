@@ -99,6 +99,7 @@ void setup() {
   while (!Serial.available());
   delay(100);
   int neoPixels = Serial.parseInt();
+  while (Serial.available()) {Serial.read();}
   Serial.println("Let me save that...");
   EEPROM.write(1, neoPixels);
   Serial.println("Okay, now I have some more questions. First, are your NeoPixels RGBW or RGB?");
