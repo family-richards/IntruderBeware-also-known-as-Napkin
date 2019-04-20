@@ -10,8 +10,8 @@ Now, click on Tools > Port. Write down all of the numbers and letters. Click awa
 Next, plug in your ESP32 Feather. Click on Tools > Port again. Find the combination of numbers and letters that isn't on the list, and click on it.  
   After that, click on File > Preferences. Find the place where it says "Additional Boards Manager URLs:". Click on the icon that looks like this: ![](popout.png)  
 If you already have added an additional board manager URL, press enter. Now type "https://dl.espressif.com/dl/package_esp32_index.json" into the window. Press OK, and then click OK again.  
-  Now, press Tools > Board > Boards Manager... and type ESP32 into the search bar. Then, click the button that says "Install".
-It'll take a while to install. When it's done, close the window. Now you can finally test your ESP32 Feather!
-  Click on Tools > Board. Scroll down, and under ESP32 Arduino, you should find "Adafruit ESP32 Feather". Click on it! You're so close!
-  Now, press the upload button. It looks like this: ![](upload.png)
-  In a little, your ESP32 Feather should start blinking!
+  Now, press Tools > Board > Boards Manager... and type ESP32 into the search bar. Then, click the button that says "Install".  
+It'll take a while to install. When it's done, close the window. Now you can finally test your ESP32 Feather!  
+  Click on Tools > Board. Scroll down, and under ESP32 Arduino, you should find "Adafruit ESP32 Feather". Click on it! You're so close!  
+  Now, press the upload button. It looks like this: ![](upload.png)  
+  In a little, your ESP32 Feather should start blinking!  
