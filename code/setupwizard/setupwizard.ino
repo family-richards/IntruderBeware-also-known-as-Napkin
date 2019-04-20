@@ -109,6 +109,7 @@ void setup() {
   String retval = Serial.readString();
   retval.toLowerCase();
   retval.trim();
+  while (Serial.available()) {Serial.read();}
   if (retval == "rgb") {
     Serial.println("Great! Now, second: Are your NeoPixels V1 or V2?");
     checkWordsRGBVersion:
@@ -116,6 +117,7 @@ void setup() {
     delay(100);
     String retval = Serial.readString();
     retval.toLowerCase();
+    while (Serial.available()) {Serial.read();}
     if (retval == "v1") {
       Serial.println("The settings are found! Give me a second to save them...");
       EEPROM.writeUShort(2, NEO_KHZ400+NEO_RGB);
