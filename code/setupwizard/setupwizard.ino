@@ -143,6 +143,22 @@ void setup() {
   colorWipe(strippy.Color(0, 255, 0), 2000/strippy.numPixels());
   colorWipe(strippy.Color(0, 0, 255), 2000/strippy.numPixels());
   Serial.println("Did that work? Type y or n.");
+  checkNeopix:
+  while(!Serial.available());
+  delay(100);
+  String firstChar = Serial.readString();
+  firstChar.toLowerCase();
+  firstChar = String(firstChar.charAt(0));
+  if (firstChar == "y") {
+    Serial.println("Great!");
+  } else if (firstChar == "n") {
+    Serial.println("Hmm... try making a issue on GitHub.");
+  } else {
+    while (Serial.available()) {Serial.read();}
+    Serial.println("Please type y or n.");
+    goto checkNeopix;
+  }
+  while (Serial.available()) {Serial.read();}
 }
 
 void loop() {
