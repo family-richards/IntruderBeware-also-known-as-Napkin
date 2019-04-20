@@ -132,9 +132,9 @@ void setup() {
   Serial.println("Now, let's test your NeoPixels. Give me a second to set them up...");
   strippy = Adafruit_NeoPixel(EEPROM.read(1), 4, EEPROM.readUShort(2));
   Serial.println("Done! You should see all of them turn red, then green, then blue.");
-  colorWipe(strippy.color(255, 0, 0), 2000/strippy.numPixels());
-  colorWipe(strippy.color(0, 255, 0), 2000/strippy.numPixels());
-  colorWipe(strippy.color(0, 0, 255), 2000/strippy.numPixels());
+  colorWipe(strippy.Color(255, 0, 0), 2000/strippy.numPixels());
+  colorWipe(strippy.Color(0, 255, 0), 2000/strippy.numPixels());
+  colorWipe(strippy.Color(0, 0, 255), 2000/strippy.numPixels());
   Serial.println("Did that work? Type y or n.");
 }
 
