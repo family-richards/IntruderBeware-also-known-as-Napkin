@@ -107,6 +107,7 @@ void setup() {
   delay(100);
   String retval = Serial.readString();
   retval.toLowerCase();
+  retval.trim();
   if (retval == "rgb") {
     Serial.println("Great! Now, second: Are your NeoPixels V1 or V2?");
     checkWordsRGBVersion:
