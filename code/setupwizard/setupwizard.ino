@@ -61,7 +61,7 @@ void setup() {
   checkWords:
   while(!Serial.available());
   delay(100);
-  String firstChar = String(Serial.read());
+  String firstChar = Serial.readString();
   firstChar.toLowerCase();
   firstChar = String(firstChar.charAt(0));
   if (firstChar == "y") {
