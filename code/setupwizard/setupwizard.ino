@@ -82,7 +82,7 @@ void setup() {
   checkWordsSiren:
   while(!Serial.available());
   delay(100);
-  firstChar = String(Serial.read());
+  firstChar = Serial.readString();
   firstChar.toLowerCase();
   firstChar = String(firstChar.charAt(0));
   if (firstChar == "y") {
