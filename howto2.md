@@ -18,13 +18,21 @@ It'll take a while to install. When it's done, close the window. Now you can fin
   Now, you need to get your PCB. OSHPark makes great PCBs. It's okay that you get 3, because you'll want multiple IntruderBewares to protect your house. You can find pictures of the PCB, the Gerber files, and the .fzz files in the /PCB Files/ directory.
   Time to go shopping! Here's a list:
 + MicroSD breakout (https://adafru.it/254)
-+ NeoPixel strip (https://adafru.it/3636 (cut to size needed))
++ NeoPixel strip (https://adafru.it/3636 (cut to size needed, and can use other neopixels))
 + PIR motion sensor (https://adafru.it/189)
 + 3 IR LEDs (https://adafru.it/388)
 + Piezo buzzer (https://adafru.it/160)
 + Speakers with 3-pin (ground, left channel, right channel)
-+ 3-pin audio jack (https://adafru.it/2971)
++ 3-pin audio jack (https://adafru.it/2791)
 + Arducam 5MP module (https://bit.ly/2PjWdNe)
 
-  Are you done? Great! Let's start soldering! You'll need to solder at least 63 points.
+  Are you done? Great! Let's start soldering! You'll need to solder at least 62 points.
 1. First, let's solder up the MicroSD breakout. You might want to put it on 1 in. wires. You're already more than 1/10 done!
+2. Second, solder the piezo buzzer. 1/8 of the way there!
+3. Third, let's add the speaker. There's only 3 wires to solder to the plug, but it's a very important part!
+4. Fourth, solder up the ESP32 Feather! Don't worry if it takes a while. You're already 1/2 of the way there!
+5. Fifth, solder a very important part: the camera! You're 3/4 of the way done already!
+6. Sixth, let's solder up the PIR. You may want to use female headers, so you can plug and unplug it.
+7. Seventh, add your NeoPixels to the mix. Remember, a lot adds up!
+8. For the last step I can help you with, add the IR LEDs. Remember to add resistors!
+DO NOT solder the jumper.
