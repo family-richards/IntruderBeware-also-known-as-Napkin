@@ -34,5 +34,8 @@ It'll take a while to install. When it's done, close the window. Now you can fin
 5. Fifth, solder a very important part: the camera! You're 3/4 of the way done already!
 6. Sixth, let's solder up the PIR. You may want to use female headers, so you can plug and unplug it.
 7. Seventh, add your NeoPixels to the mix. Remember, a lot adds up!
-8. For the last step I can help you with, add the IR LEDs. Remember to add resistors!
-DO NOT solder the jumper.
+8. For the last step I can help you with, add the IR LEDs. Remember to add resistors!  
+DO NOT solder the jumper.  
+  We can finally test everything! Plug in the ESP32 Feather to your computer. Do you immediately see the "CHG" LED rapidly blinking and that your computer detects the ESP32 Feather? If not, immediately YANK the cord out, and make an issue on GitHub. If it does, great! Go on to the next step.  
+  Now, find the window in the Arduino IDE titled "setupwizard.ino". Press the upload button. If you need a refresher, it looks like this: ![](upload.png)  
+  Now, open the Serial Monitor. It has a button that looks like this:
