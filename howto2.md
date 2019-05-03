@@ -49,3 +49,13 @@ Hopefully it doesn't say this: Failed to initialise EEPROM!
 4. Okay, now let's have you make a whole bunch of motion. Again, in 5 seconds, I'll take 10 snapshots.
 5. Taking shapshots...
 6. Hmm... let me figure out if your PIR is reverse...
+Hopefully, it says this: It's reverse! Give me a second to save that...
+Or this: It's not reverse! Give me a second to save that...
+But not this: Hmm... I'm having trouble. Try again by resetting this, and put up a issue on GitHub.
+7. Now, let's test the buzzer. In 5 seconds, I'll play a low tone, a medium tone, and then a high tone.
+8. Did you hear the tones? y/n
+Hopefully it says this: Great!
+But not this: Hmm... try making a issue on GitHub.
+Or not this: Please type y or n.
+9. Cover your ears! In 5 seconds, I'll test the siren.
+10. Did you hear the tone? y/n
