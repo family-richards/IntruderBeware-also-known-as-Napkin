@@ -38,4 +38,6 @@ It'll take a while to install. When it's done, close the window. Now you can fin
 DO NOT solder the jumper.  
   We can finally test everything! Plug in the ESP32 Feather to your computer. Do you immediately see the "CHG" LED rapidly blinking and that your computer detects the ESP32 Feather? If not, immediately YANK the cord out, and make an issue on GitHub. If it does, great! Go on to the next step.  
   Now, find the window in the Arduino IDE titled "setupwizard.ino". Press the upload button. If you need a refresher, it looks like this: ![](upload.png)  
-  Now, open the Serial Monitor. It has a button that looks like this:
+  Now, open the Serial Monitor. It has a button that looks like this: ![](serialmonitor.png)  
+  Make sure your baud rate is set to 9600 baud. There's a dropdown menu that looks like this: ![](bauddropdown.png)
+  Next, you can reset
