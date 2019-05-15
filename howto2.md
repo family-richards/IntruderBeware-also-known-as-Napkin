@@ -96,5 +96,5 @@ Now, open your smoke detector up. Start poking around. Earmuffs might be handy, 
 Think a little bit. Now, when you got your IntruderBeware PCB, did you notice that little 8 by 8 spot of protoboard? It has some labels on it.  
 You have access to 3 GPIO pins, power, and ground. You can use a knife to form a mini-circuit. And what will that mini-circuit do? Use miscellaneous parts to convert some pins on the smoke detector into something the ESP32 can understand.  
 So what are you waiting for? Start with using a 3v power supply, a breadboard, a multimeter, and some jumper wires. Earmuffs might be handy here again.  
-Eventually, cut the traces in the proper places, triple-check there are no short circuits, and solder on the components. Once you're done, solder the jumper that's to the right of the board for your mini-circuit to give power to your circuit.
-Make sure nothing is getting hot. Then, write a function to check if there's smoke or not. Don't know how to write an Arduino program? Reconsider IntruderBeware.
+Eventually, cut the traces in the proper places, triple-check there are no short circuits, and solder on the components. Once you're done, solder the jumper that's to the right of the board for your mini-circuit to give power to your circuit.  
+Make sure nothing is getting hot. Then, write a function to check if there's smoke or not. Don't know how to write an Arduino program? Reconsider IntruderBeware.  
