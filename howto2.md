@@ -90,3 +90,11 @@ Upload the code to your ESP32 Feather using the steps mentioned above [here.](#p
 Open the Serial Monitor at 9600 baud, and reset the board (more detailed instructions [here](#communication)). 
 It should tell you the settings that are stored. If any of them are incorrect, go [back here](#communication) and [back here](#testing) to run the setup wizard again.
 If all of the settings are great, then I have a little [suprise for you to enjoy!](code/suprise.md) Once you're done enjoying it, it's time to get serious!
+# Setting Up Smoke
+Sadly, I forgot something. You know that smoke detector you bought earlier? Well, find your multimeter. If you don't have a multimeter, ask yourself if you're really the type of person for IntruderBeware.  
+Now, open your smoke detector up. Start poking around. Earmuffs might be handy, because you might want to test the alarm while you're probing around.  
+Think a little bit. Now, when you got your IntruderBeware PCB, did you notice that little 8 by 8 spot of protoboard? It has some labels on it.  
+You have access to 3 GPIO pins, power, and ground. You can use a knife to form a mini-circuit. And what will that mini-circuit do? Use miscellaneous parts to convert some pins on the smoke detector into something the ESP32 can understand.  
+So what are you waiting for? Start with using a 3v power supply, a breadboard, a multimeter, and some jumper wires. Earmuffs might be handy here again.  
+Eventually, cut the traces in the proper places, triple-check there are no short circuits, and solder on the components. Once you're done, solder the jumper that's to the right of the board for your mini-circuit to give power to your circuit.
+Make sure nothing is getting hot. Then, write a function to check if there's smoke or not. Don't know how to write an Arduino program? Reconsider IntruderBeware.
