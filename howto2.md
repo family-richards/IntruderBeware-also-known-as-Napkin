@@ -1,9 +1,11 @@
+# Setup
   Thanks for choosing IntruderBeware! The first thing you'll need to do is download this repository. Download the zip of it, and then unzip it.  
   Now, get a ESP32 Feather. You can get one here: https://adafru.it/3405  
   Find the folder called "code". Open it, and find the folder called "setupwizard". Open it, too.  
   Now, make sure you have the Arduino IDE installed. If not, download it here: https://www.arduino.cc/en/Main/Software  
 If you need to, restart your computer.  
-  When you're back in /code/setupwizard, open the file called setupwizard.ino (or on Windows it might be called just setupwizard). The Arduino IDE should open.  
+  When you're back in /code/setupwizard, open the file called setupwizard.ino (or it might be called just setupwizard). The Arduino IDE should open.  
+# Programming
   Take your ESP32 Feather, and find a matching USB cable. If you've already plugged it in, unplug it.  
   Before we get started, we need to test your ESP32. In the Arduino IDE, click on File > Examples > 01.Basics > Blink.  
 Now, click on Tools > Port. Write down all of the numbers and letters. Click away from Tools > Port now.  
@@ -15,6 +17,7 @@ It'll take a while to install. When it's done, close the window. Now you can fin
   Click on Tools > Board. Scroll down, and under ESP32 Arduino, you should find "Adafruit ESP32 Feather". Click on it! You're so close!  
   Now, press the upload button. It looks like this: ![](upload.png)  
   In a little, your ESP32 Feather should start blinking!  
+# Shopping
   Now, you need to get your PCB. OSHPark makes great PCBs. It's okay that you get 3, because you'll want multiple IntruderBewares to protect your house. You can find pictures of the PCB, the Gerber files, and the .fzz files in the /PCB Files/ directory.
   Time to go shopping! Here's a list:
 + MicroSD breakout (https://adafru.it/254)
@@ -25,7 +28,7 @@ It'll take a while to install. When it's done, close the window. Now you can fin
 + Speakers with 3-pin (ground, left channel, right channel)
 + 3-pin audio jack (https://adafru.it/2791)
 + Arducam 5MP module (https://bit.ly/2PjWdNe)
-
+# Soldering
   Are you done? Great! Let's start soldering! You'll need to solder at least 62 points.
 1. First, let's solder up the MicroSD breakout. You might want to put it on 1 in. wires. You're already more than 1/10 done!
 2. Second, solder the piezo buzzer. 1/8 of the way there!
@@ -36,26 +39,50 @@ It'll take a while to install. When it's done, close the window. Now you can fin
 7. Seventh, add your NeoPixels to the mix. Remember, a lot adds up!
 8. For the last step I can help you with, add the IR LEDs. Remember to add resistors!  
 DO NOT solder the jumper.  
+# Testing
   We can finally test everything! Plug in the ESP32 Feather to your computer. Do you immediately see the "CHG" LED rapidly blinking and that your computer detects the ESP32 Feather? If not, immediately YANK the cord out, and make an issue on GitHub. If it does, great! Go on to the next step.  
   Now, find the window in the Arduino IDE titled "setupwizard.ino". Press the upload button. If you need a refresher, it looks like this: ![](upload.png)  
   Now, open the Serial Monitor. It has a button that looks like this: ![](serialmonitor.png)  
   Make sure your baud rate is set to 9600 baud. There's a dropdown menu that looks like this:  
   ![](bauddropdown.png)  
-  Next, you can reset the ESP32 Feather! I'll guide you through what it should say.  
-1. Welcome to the IntruderBeware setup wizard! Wait a moment as I setup the inputs, outputs, and EEPROM...  
+  Next, you can reset the ESP32 Feather! I'll guide you through what it should say.    
++ Welcome to the IntruderBeware setup wizard! Wait a moment as I setup the inputs, outputs, and EEPROM...  
 Hopefully it doesn't say this: Failed to initialise EEPROM!  
-2. Done! First, let's setup your PIR. Go behind your PIR, so it can't see you. In five seconds, I'll take 10 snapshots of the PIR pin.  
-3. Taking shapshots...  
-4. Okay, now let's have you make a whole bunch of motion. Again, in 5 seconds, I'll take 10 snapshots.  
-5. Taking shapshots...  
-6. Hmm... let me figure out if your PIR is reverse...  
++ Done! First, let's setup your PIR. Go behind your PIR, so it can't see you. In five seconds, I'll take 10 snapshots of the PIR pin.  
++ Taking shapshots...  
++ Okay, now let's have you make a whole bunch of motion. Again, in 5 seconds, I'll take 10 snapshots.  
++ Taking shapshots...  
++ Hmm... let me figure out if your PIR is reverse...  
 Hopefully, it says this: It's reverse! Give me a second to save that...  
 Or this: It's not reverse! Give me a second to save that...  
 But not this: Hmm... I'm having trouble. Try again by resetting this, and put up a issue on GitHub.  
-7. Now, let's test the buzzer. In 5 seconds, I'll play a low tone, a medium tone, and then a high tone.  
-8. Did you hear the tones? y/n  
++ Now, let's test the buzzer. In 5 seconds, I'll play a low tone, a medium tone, and then a high tone.  
++ Did you hear the tones? y/n  
 Hopefully it says this: Great!  
 But not this: Hmm... try making a issue on GitHub.  
 Or not this: Please type y or n.  
-9. Cover your ears! In 5 seconds, I'll test the siren.  
-10. Did you hear the tone? y/n  
++ Cover your ears! In 5 seconds, I'll test the siren.  
++ Did you hear the tone? y/n  
+Hopefully it says this: Great!  
+But not this: Hmm... try making a issue on GitHub.  
+Or this: Please type y or n.  
++ Let's try testing your NeoPixels. How many NeoPixels are in your strip? (I would discourage more than 25.)  
++ Let me save that...  
++ Okay, now I have some more questions. First, are your NeoPixels RGBW or RGB?  
+This is one way it might say: Great! Now, second: Are your NeoPixels V1 or V2?  
+Hopefully it says this: The settings are found! Give me a second to save them...  
+But not this: Please type V1 or V2.
+Or it might say this:  The settings are found! Give me a second to save them...  
+But hopefully it doesn't say this: Please type RGBW or RGB.  
++ Now, let's test your NeoPixels. Give me a second to set them up...  
++ Done! You should see all of them turn red, then green, then blue.
++ Did that work? Type y or n.
+Hopefully it says this: Great!  
+But not this: Hmm... try making a issue on GitHub.  
+Or not this: Please type y or n.  
+# Checking Settings
+Yahoo! 😊 You're all done with the setup wizard! But now that you've tested everything and figured out the settings, time to check that the settings are correct.  
+Your computer should still have its file explorer open, underneath of "Blink" and "setupwizard". Bring the file explorer application to the front.  
+Navigate out of the "setupwizard" folder, and find the folder called "settinggetter". Open that folder.
+Once you're in /code/settinggetter, open the file called settinggetter.ino (or it might be called just settinggetter). The Arduino IDE should open.  
+Upload the code to your ESP32 Feather using the steps mentioned above [here](#programming)
