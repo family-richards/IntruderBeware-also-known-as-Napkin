@@ -104,4 +104,4 @@ You know, it's pretty good. You get a safe home in exchange for pressing 100 key
 Well, find the template folder and open up template.ino. Remember this is a WIP(Work In Progress), so until I say so, it may not be all the way working.
 And join the IntruderBeware community, if you have time.
 Also, you get bragging rights, you know. You get to say "I have a open source security system" to your friends.  
-Anyway, @KTibow out for now.
+Anyway, KTibow out for now. Visit my [profile here](https://github.com/KTibow).
