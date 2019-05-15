@@ -98,3 +98,10 @@ You have access to 3 GPIO pins, power, and ground. You can use a knife to form a
 So what are you waiting for? Start with using a 3v power supply, a breadboard, a multimeter, and some jumper wires. Earmuffs might be handy here again.  
 Eventually, cut the traces in the proper places, triple-check there are no short circuits, and solder on the components. Once you're done, solder the jumper that's to the right of the board for your mini-circuit to give power to your circuit.  
 Make sure nothing is getting hot. Then, write a function to check if there's smoke or not. Don't know how to write an Arduino program? Reconsider IntruderBeware.  
+Are you still convinced that IntruderBeware is right for you? All right, all right.  
+Here's the deal: I work super hard on the program for us, and you make it more popular.  
+You know, it's pretty good. You get a safe home in exchange for pressing 100 keys and clicking on buttons 100 times, and I get a safe home and have a popular, interesting, fun project.  
+Well, find the template folder and open up template.ino. Remember this is a WIP(Work In Progress), so until I say so, it may not be all the way working.
+And join the IntruderBeware community, if you have time.
+Also, you get bragging rights, you know. You get to say "I have a open source security system" to your friends.  
+Anyway, @KTibow out for now.
