@@ -4,7 +4,7 @@
 void setup() {
   while (!Serial);
   Serial.begin(9600);
-  Serial.println("Welcome to the IntruderBeware setting getter! Give me a second to set up the EEPROM...");
+  Serial.println("Welcome to the Napkin setting getter! Give me a second to set up the EEPROM...");
   if (!EEPROM.begin(EEPROM_SIZE)){
     Serial.println("Failed to initialise EEPROM!");
     while(true);

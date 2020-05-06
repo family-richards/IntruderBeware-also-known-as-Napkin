@@ -5,7 +5,7 @@ Adafruit_NeoPixel strippy;
 void setup() {
   while(!Serial);
   Serial.begin(9600);
-  Serial.println("Welcome to the IntruderBeware setup wizard! Wait a moment as I setup the inputs, outputs, and EEPROM...");
+  Serial.println("Welcome to the Napkin setup wizard! Wait a moment as I setup the inputs, outputs, and EEPROM...");
   pinMode(27, INPUT);
   pinMode(32, OUTPUT);
   pinMode(15, OUTPUT);
