@@ -85,8 +85,8 @@ Or not this: Please type y or n.
 # Checking Settings
 Yahoo! 😊 You're all done with the setup wizard! But now that you've tested everything and figured out the settings, time to check that the settings are correct.  
 Your computer should still have its file explorer open, underneath of `Blink` and `setupwizard`. Bring the file explorer application to the front.  
-Navigate out of the "setupwizard" folder, and find the folder called "settinggetter". Open that folder.  
-Once you're in /code/settinggetter, open the file called settinggetter.ino (or it might be called just settinggetter). The Arduino IDE should open.  
+Navigate out of the `setupwizard` folder, and find the folder called [`/code/settinggetter`](code/settinggetter/). Open that folder.  
+Once you're in [`/code/settinggetter`](code/settinggetter/), open the file called [`settinggetter.ino`](code/settinggetter/settinggetter.ino). The Arduino IDE should open.  
 Upload the code to your ESP32 Feather using the steps mentioned above [here.](#programming)  
 Open the Serial Monitor at 9600 baud, and reset the board (more detailed instructions [here](#communication)). 
 It should tell you the settings that are stored. If any of them are incorrect, go [back here](#communication) and [back here](#testing) to run the setup wizard again.
@@ -100,6 +100,6 @@ So what are you waiting for? Start with using a 3v power supply, a breadboard, a
 Eventually, cut the traces in the proper places, triple-check there are no short circuits, and solder on the components. Once you're done, solder the jumper that's to the right of the board for your mini-circuit to give power to your circuit.  
 Make sure nothing is getting hot. Then, write a function to check if there's smoke or not. Don't know how to write an Arduino program? Reconsider Napkin.  
 Are you still convinced that Napkin is right for you? All right, all right.  
-You know, it's pretty good. You get a safe home in exchange for pressing 100 keys and clicking on buttons 100 times, and I get a safe home and have a interesting, fun project.  
-Well, find the template folder and open up template.ino. Remember this is a WIP (Work In Progress), so until I say so, it may not be all the way working.    
+You know, it's pretty good. You get a safe home in exchange for pressing 100 keys and clicking on buttons 100 times, and you get a safe home and have a interesting, fun project.  
+Well, find the template folder and open up template.ino. Remember this is a WIP (Work In Progress), so it may not be all the way working.    
 Anyway, [KTibow](https://github.com/KTibow) out for now! Bye!
