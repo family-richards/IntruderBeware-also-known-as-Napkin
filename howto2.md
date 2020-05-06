@@ -4,22 +4,22 @@
   Find the folder called [`code`](code/). Open it, and find the folder called [`setupwizard`](code/setupwizard/). Open it, too.  
   Now, make sure you have the Arduino IDE installed. If not, [download it](https://www.arduino.cc/en/Main/Software).  
 If you need to, restart your computer.  
-  When you're back in [`/code/setupwizard`](code/setupwizard/), open the file called [setupwizard.ino](code/setupwizard/setupwizard.ino) with the  Arduino IDE.  
+  When you're back in [`/code/setupwizard`](code/setupwizard/), open the file called [`setupwizard.ino`](code/setupwizard/setupwizard.ino) with the  Arduino IDE.  
   Take your ESP32 Feather, and find a matching USB cable. If you've already plugged it in, unplug it.  
   Before we get started, we need to test your ESP32. In the Arduino IDE, click on File > Examples > 01.Basics > Blink.  
 # Programming
 Now, click on Tools > Port. Write down all of the numbers and letters. Click away from Tools > Port now.  
 Next, plug in your ESP32 Feather. Click on Tools > Port again. Find the combination of numbers and letters that isn't on the list, and click on it.  
   After that, click on File > Preferences. Find the place where it says "Additional Boards Manager URLs:". Click on the icon that looks like this: ![Two side-by-side windows](popout.png)  
-If you already have added an additional board manager URL, press enter. Now type "https://dl.espressif.com/dl/package_esp32_index.json" into the window. Press OK, and then click OK again.  
+If you already have added an additional board manager URL, press enter. Now type `https://dl.espressif.com/dl/package_esp32_index.json` into the window. Press OK, and then click OK again.  
   Now, press Tools > Board > Boards Manager... and type ESP32 into the search bar. Then, click the button that says `Install`.  
 It'll take a while to install. When it's done, close the window. Now you can finally test your ESP32 Feather!  
   Click on Tools > Board. Scroll down, and under ESP32 Arduino, you should find "Adafruit ESP32 Feather". Click on it! You're so close!  
-  Now, press the upload button. It looks like this: ![](upload.png)  
+  Now, press the upload button. It looks like this: ![an arrow pointing to the right](upload.png)  
   In a little, your ESP32 Feather should start blinking!  
 # Shopping
   Now, you need to get your PCB. OSHPark makes great PCBs. It's okay that you get 3, because you'll want multiple IntruderBewares to protect your house. You can find pictures of the PCB, the Gerber files, and the .fzz files in the /PCB Files/ directory.
-  Time to go shopping! Here's a list:
+  Time to go shopping! Here's a list of stuff you need:
 + MicroSD breakout (https://adafru.it/254)
 + NeoPixel strip (https://adafru.it/3636 (cut to size needed, and can use other neopixels))
 + PIR motion sensor (https://adafru.it/189)
@@ -41,18 +41,18 @@ It'll take a while to install. When it's done, close the window. Now you can fin
 DO NOT solder the jumper.  
 # Communication
   We can finally test everything! Plug in the ESP32 Feather to your computer. Do you immediately see the "CHG" LED rapidly blinking and that your computer detects the ESP32 Feather? If not, immediately YANK the cord out, and make an issue on GitHub. If it does, great! Go on to the next step.  
-  Now, find the window in the Arduino IDE titled "setupwizard.ino". Press the upload button. If you need a refresher, it looks like this: ![](upload.png)  
+  Now, find the window in the Arduino IDE titled `setupwizard.ino`. Press the upload button. If you need a refresher, it looks like this: ![an arrow pointing to the right](upload.png)  
   Now, open the Serial Monitor. It has a button that looks like this: ![](serialmonitor.png)  
   Make sure your baud rate is set to 9600 baud. There's a dropdown menu that looks like this:  
-  ![](bauddropdown.png)  
+  ![a dropdown menu with all of the baud numbers](bauddropdown.png)  
   Next, you can reset the ESP32 Feather! I'll guide you through what it should say.   
 # Testing
 + Welcome to the IntruderBeware setup wizard! Wait a moment as I setup the inputs, outputs, and EEPROM...  
 Hopefully it doesn't say this: Failed to initialise EEPROM!  
 + Done! First, let's setup your PIR. Go behind your PIR, so it can't see you. In five seconds, I'll take 10 snapshots of the PIR pin.  
-+ Taking shapshots...  
++ Taking snapshots...  
 + Okay, now let's have you make a whole bunch of motion. Again, in 5 seconds, I'll take 10 snapshots.  
-+ Taking shapshots...  
++ Taking snapshots...  
 + Hmm... let me figure out if your PIR is reverse...  
 Hopefully, it says this: It's reverse! Give me a second to save that...  
 Or this: It's not reverse! Give me a second to save that...  
@@ -73,7 +73,8 @@ Or this: Please type y or n.
 This is one way it might say: Great! Now, second: Are your NeoPixels V1 or V2?  
 Hopefully it says this: The settings are found! Give me a second to save them...  
 But not this: Please type V1 or V2.
-Or it might say this:  The settings are found! Give me a second to save them...  
++ It **might** say Great! Now, second: Are your NeoPixels V1 or V2?  
+It might say this: The settings are found! Give me a second to save them...  
 But hopefully it doesn't say this: Please type RGBW or RGB.  
 + Now, let's test your NeoPixels. Give me a second to set them up...  
 + Done! You should see all of them turn red, then green, then blue.
@@ -83,7 +84,7 @@ But not this: Hmm... try making a issue on GitHub.
 Or not this: Please type y or n.  
 # Checking Settings
 Yahoo! 😊 You're all done with the setup wizard! But now that you've tested everything and figured out the settings, time to check that the settings are correct.  
-Your computer should still have its file explorer open, underneath of "Blink" and "setupwizard". Bring the file explorer application to the front.  
+Your computer should still have its file explorer open, underneath of `Blink` and `setupwizard`. Bring the file explorer application to the front.  
 Navigate out of the "setupwizard" folder, and find the folder called "settinggetter". Open that folder.  
 Once you're in /code/settinggetter, open the file called settinggetter.ino (or it might be called just settinggetter). The Arduino IDE should open.  
 Upload the code to your ESP32 Feather using the steps mentioned above [here.](#programming)  
@@ -97,11 +98,8 @@ Think a little bit. Now, when you got your IntruderBeware PCB, did you notice th
 You have access to 3 GPIO pins, power, and ground. You can use a knife to form a mini-circuit. And what will that mini-circuit do? Use miscellaneous parts to convert some pins on the smoke detector into something the ESP32 can understand.  
 So what are you waiting for? Start with using a 3v power supply, a breadboard, a multimeter, and some jumper wires. Earmuffs might be handy here again.  
 Eventually, cut the traces in the proper places, triple-check there are no short circuits, and solder on the components. Once you're done, solder the jumper that's to the right of the board for your mini-circuit to give power to your circuit.  
-Make sure nothing is getting hot. Then, write a function to check if there's smoke or not. Don't know how to write an Arduino program? Reconsider IntruderBeware.  
-Are you still convinced that IntruderBeware is right for you? All right, all right.  
-Here's the deal: I work super hard on the program for us, and you make it more popular.  
-You know, it's pretty good. You get a safe home in exchange for pressing 100 keys and clicking on buttons 100 times, and I get a safe home and have a popular, interesting, fun project.  
-Well, find the template folder and open up template.ino. Remember this is a WIP(Work In Progress), so until I say so, it may not be all the way working.
-And join the IntruderBeware community, if you have time.
-Also, you get bragging rights, you know. You get to say "I have a open source security system" to your friends.  
-Anyway, KTibow out for now. Visit my [profile here](https://github.com/KTibow).
+Make sure nothing is getting hot. Then, write a function to check if there's smoke or not. Don't know how to write an Arduino program? Reconsider Napkin.  
+Are you still convinced that Napkin is right for you? All right, all right.  
+You know, it's pretty good. You get a safe home in exchange for pressing 100 keys and clicking on buttons 100 times, and I get a safe home and have a interesting, fun project.  
+Well, find the template folder and open up template.ino. Remember this is a WIP (Work In Progress), so until I say so, it may not be all the way working.    
+Anyway, [KTibow](https://github.com/KTibow) out for now! Bye!
