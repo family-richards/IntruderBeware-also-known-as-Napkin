@@ -15,7 +15,7 @@ void setup() {
   }
   Serial.println("Done! First, let's setup your PIR. Go behind your PIR, so it can't see you. In five seconds, I'll take 10 snapshots of the PIR pin.");
   delay(5000);
-  Serial.println("Taking shapshots...");
+  Serial.println("Taking snapshots...");
   byte onSnaps = 0;
   byte offSnaps = 0;
   for (int i = 0; i < 10; i++) {
