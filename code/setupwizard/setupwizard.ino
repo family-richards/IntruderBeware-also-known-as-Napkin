@@ -28,6 +28,7 @@ void setup() {
   }
   Serial.println("Okay, now let's have you make a whole bunch of motion in front of your PIR. Again, in 5 seconds, I'll take 10 snapshots.");
   delay(5000);
+  Serial.println("Taking snapshots...");
   byte onSnapsMotion = 0;
   byte offSnapsMotion = 0;
   for (int i = 0; i < 10; i++) {
