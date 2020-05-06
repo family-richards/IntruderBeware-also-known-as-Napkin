@@ -25,10 +25,9 @@ It'll take a while to install. When it's done, close the window. Now you can fin
 + PIR motion sensor (https://adafru.it/189)
 + 3 IR LEDs (https://adafru.it/388)
 + Piezo buzzer (https://adafru.it/160)
-+ Speakers with 3-pin (ground, left channel, right channel)
++ **Loud** Speakers with 3-pin (ground, left channel, right channel) *These are your sirens! Make them loud!*
 + 3-pin audio jack (https://adafru.it/2791)
 + Arducam 5MP module (https://bit.ly/2PjWdNe)
-+ Loud siren/buzzer (https://www.digikey.com/short/zz0phr)
 # Soldering
   Are you done? Great! Let's start soldering! You'll need to solder at least 62 points.
 1. First, let's solder up the MicroSD breakout. You might want to put it on 1 in. wires. You're already more than 1/10 done!
@@ -48,21 +47,24 @@ DO NOT solder the jumper.
   ![a dropdown menu with all of the baud numbers](bauddropdown.png)  
   Next, you can reset the ESP32 Feather! I'll guide you through what it should say.   
 # Testing
-+ Welcome to the IntruderBeware setup wizard! Wait a moment as I setup the inputs, outputs, and EEPROM...  
-Hopefully it doesn't say this: Failed to initialise EEPROM!  
-+ Done! First, let's setup your PIR. Go behind your PIR, so it can't see you. In five seconds, I'll take 10 snapshots of the PIR pin.  
-+ Taking snapshots...  
-+ Okay, now let's have you make a whole bunch of motion. Again, in 5 seconds, I'll take 10 snapshots.  
-+ Taking snapshots...  
-+ Hmm... let me figure out if your PIR is reverse...  
-Hopefully, it says this: It's reverse! Give me a second to save that...  
-Or this: It's not reverse! Give me a second to save that...  
-But not this: Hmm... I'm having trouble. Try again by resetting this, and put up a issue on GitHub.  
-+ Now, let's test the buzzer. In 5 seconds, I'll play a low tone, a medium tone, and then a high tone.  
-+ Did you hear the tones? y/n  
-Hopefully it says this: Great!  
-But not this: Hmm... try making a issue on GitHub.  
-Or not this: Please type y or n.  
++ `Welcome to the IntruderBeware setup wizard! Wait a moment as I setup the inputs, outputs, and EEPROM...`  
+Hopefully it doesn't say this: `Failed to initialise EEPROM!`  
++ `Done! First, let's setup your PIR. Go behind your PIR, so it can't see you. In five seconds, I'll take 10 snapshots of the PIR pin.`  
++ At this point, go behind the PIR within 5 seconds.
++ `Taking snapshots...`  
++ `Okay, now let's have you make a whole bunch of motion. Again, in 5 seconds, I'll take 10 snapshots.`  
++ At this point, go in front of the PIR within 5 seconds.
++ `Taking snapshots...`  
++ `Hmm... let me figure out if your PIR is reverse...`  
+Hopefully, it says this: `It's reverse! Give me a second to save that...`  
+Or this: It's not reverse! `Give me a second to save that...`  
+But not this: `Hmm... I'm having trouble. Try again by resetting this, and put up a issue on GitHub.`  
++ `Now, let's test the buzzer. In 5 seconds, I'll play a low tone, a medium tone, and then a high tone.`  
++ `Did you hear the tones? y/n`  
++ At this point, type in `y` or `n` into the serial console.
+Hopefully it says this: `Great!`  
+But not this: `Hmm... try making a issue on GitHub.`  
+Or not this: `Please type y or n.`  
 + Cover your ears! In 5 seconds, I'll test the siren.  
 + Did you hear the tone? y/n  
 Hopefully it says this: Great!  
