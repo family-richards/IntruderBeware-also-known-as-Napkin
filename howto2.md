@@ -1,18 +1,18 @@
 # Setup
-  Thanks for choosing IntruderBeware! The first thing you'll need to do is download this repository. Download the zip of it, and then unzip it.  
-  Now, get a ESP32 Feather. You can get one here: https://adafru.it/3405  
-  Find the folder called "code". Open it, and find the folder called "setupwizard". Open it, too.  
-  Now, make sure you have the Arduino IDE installed. If not, download it here: https://www.arduino.cc/en/Main/Software  
+  Thanks for choosing Napkin! The first thing you'll need to do is download this repository. Download the [zip of it](https://github.com/family-richards/Napkin/archive/master.zip) and unzip it, or clone it with `git clone https://github.com/family-richards/Napkin.git`.  
+  Napkin is powered by the [ESP32 Feather](https://adafru.it/3405).    
+  Find the folder called [`code`](code/). Open it, and find the folder called [`setupwizard`](code/setupwizard/). Open it, too.  
+  Now, make sure you have the Arduino IDE installed. If not, [download it](https://www.arduino.cc/en/Main/Software).  
 If you need to, restart your computer.  
-  When you're back in /code/setupwizard, open the file called setupwizard.ino (or it might be called just setupwizard). The Arduino IDE should open.  
+  When you're back in [`/code/setupwizard`](code/setupwizard/), open the file called [setupwizard.ino](code/setupwizard/setupwizard.ino) with the  Arduino IDE.  
   Take your ESP32 Feather, and find a matching USB cable. If you've already plugged it in, unplug it.  
   Before we get started, we need to test your ESP32. In the Arduino IDE, click on File > Examples > 01.Basics > Blink.  
 # Programming
 Now, click on Tools > Port. Write down all of the numbers and letters. Click away from Tools > Port now.  
 Next, plug in your ESP32 Feather. Click on Tools > Port again. Find the combination of numbers and letters that isn't on the list, and click on it.  
-  After that, click on File > Preferences. Find the place where it says "Additional Boards Manager URLs:". Click on the icon that looks like this: ![](popout.png)  
+  After that, click on File > Preferences. Find the place where it says "Additional Boards Manager URLs:". Click on the icon that looks like this: ![Two side-by-side windows](popout.png)  
 If you already have added an additional board manager URL, press enter. Now type "https://dl.espressif.com/dl/package_esp32_index.json" into the window. Press OK, and then click OK again.  
-  Now, press Tools > Board > Boards Manager... and type ESP32 into the search bar. Then, click the button that says "Install".  
+  Now, press Tools > Board > Boards Manager... and type ESP32 into the search bar. Then, click the button that says `Install`.  
 It'll take a while to install. When it's done, close the window. Now you can finally test your ESP32 Feather!  
   Click on Tools > Board. Scroll down, and under ESP32 Arduino, you should find "Adafruit ESP32 Feather". Click on it! You're so close!  
   Now, press the upload button. It looks like this: ![](upload.png)  
