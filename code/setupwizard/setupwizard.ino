@@ -26,7 +26,7 @@ void setup() {
     }
     delay(100);
   }
-  Serial.println("Okay, now let's have you make a whole bunch of motion. Again, in 5 seconds, I'll take 10 snapshots.");
+  Serial.println("Okay, now let's have you make a whole bunch of motion in front of your PIR. Again, in 5 seconds, I'll take 10 snapshots.");
   delay(5000);
   byte onSnapsMotion = 0;
   byte offSnapsMotion = 0;
@@ -46,7 +46,7 @@ void setup() {
     Serial.println("It's not reverse! Give me a second to save that...");
     EEPROM.write(0, 0);
   } else {
-    Serial.println("Hmm... I'm having trouble. Try again by resetting this, and put up a issue on GitHub.");
+    Serial.println("Hmm... I'm having trouble. Try again by running this code again. If that didn't work, put up a issue on GitHub.");
     while(true);
   }
   Serial.println("Now, let's test the buzzer. In 5 seconds, I'll play a low tone, a medium tone, and then a high tone.");
@@ -67,15 +67,15 @@ void setup() {
   if (firstChar == "y") {
     Serial.println("Great!");
   } else if (firstChar == "n") {
-    Serial.println("Hmm... try making a issue on GitHub.");
+    Serial.println("Hmm... try making a issue on GitHub to get some assistance.");
   } else {
     while (Serial.available()) {Serial.read();}
     Serial.println("Please type y or n.");
     goto checkWords;
   }
   while (Serial.available()) {Serial.read();}
-  Serial.println("Cover your ears! In 5 seconds, I'll test the siren.");
-  delay(5000);
+  Serial.println("Cover your ears! In 10 seconds, I'll test the siren.");
+  delay(10000);
   // TODO: figure out if you use tone(32, 2000, 1000) or digitalWrite(32, HIGH)
   // put code to test siren here
   Serial.println("Did you hear the tone? y/n");
@@ -88,7 +88,7 @@ void setup() {
   if (firstChar == "y") {
     Serial.println("Great!");
   } else if (firstChar == "n") {
-    Serial.println("Hmm... try making a issue on GitHub.");
+    Serial.println("Hmm... try making a issue on GitHub to get some assistance.");
   } else {
     while (Serial.available()) {Serial.read();}
     Serial.println("Please type y or n.");
@@ -152,13 +152,14 @@ void setup() {
   if (firstChar == "y") {
     Serial.println("Great!");
   } else if (firstChar == "n") {
-    Serial.println("Hmm... try making a issue on GitHub.");
+    Serial.println("Hmm... try making a issue on GitHub to get some assistance.");
   } else {
     while (Serial.available()) {Serial.read();}
     Serial.println("Please type y or n.");
     goto checkNeopix;
   }
   while (Serial.available()) {Serial.read();}
+  Serial.println("If all of that worked, you're ready to move on!");
 }
 
 void loop() {
