@@ -33,9 +33,9 @@ void loop() {
     activateBeeper();
     for (uint16_t i = 0; i < strippy.numPixels(); i++) {
       if (random(0, 2) != 0) {
-        strippy.setPixelColor(i, strippy.Color(0, 0, 0))
+        strippy.setPixelColor(i, strippy.Color(0, 0, 0));
       } else {
-        strippy.setPixelColor(i, strippy.Color(230, 230, 0))
+        strippy.setPixelColor(i, strippy.Color(230, 230, 0));
       }
     }
     strippy.show();
@@ -48,9 +48,9 @@ void loop() {
     activateSiren();
     for (uint16_t i = 0; i < strippy.numPixels(); i++) {
       if (random(0, 2) != 0) {
-        strippy.setPixelColor(i, strippy.Color(0, 0, 0))
+        strippy.setPixelColor(i, strippy.Color(0, 0, 0));
       } else {
-        strippy.setPixelColor(i, strippy.Color(255, 0, 0))
+        strippy.setPixelColor(i, strippy.Color(255, 0, 0));
       }
     }
     strippy.show();
