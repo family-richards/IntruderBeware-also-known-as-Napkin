@@ -21,9 +21,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - name: Install Arduino CLI
-      uses: arduino/setup-arduino-cli@v1.0.0
-    - name: Setup Arduino CLI
+    - uses: arduino/setup-arduino-cli@v1.0.0
+    - name: Install ESP32
       run: |
         arduino-cli core update-index --additional-urls 'https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json'
         arduino-cli core install esp32:esp32 --additional-urls 'https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json'
