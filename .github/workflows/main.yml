@@ -26,7 +26,7 @@ jobs:
         arduino-cli core update-index --additional-urls 'https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json'
         arduino-cli core install esp32:esp32 --additional-urls 'https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json'
         #esp32:esp32:featheresp32
-        for INOS in $(find . -print | grep ino)
+        for INOS in $(pwd | find -print | grep ino)
         do
           echo "Compiling $INOS"
           arduino-cli -b esp32:esp32:featheresp32 $INOS
