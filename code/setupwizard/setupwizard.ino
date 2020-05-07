@@ -10,7 +10,7 @@ void setup() {
   pinMode(32, OUTPUT);
   pinMode(15, OUTPUT);
   if (!EEPROM.begin(EEPROM_SIZE)){
-    Serial.println("Failed to initialise EEPROM!");
+    Serial.println("Hmm... I'm having trouble with the EEPROM. Try again by running this code again. If that didn't work, put up a issue on GitHub.");
     while(true);
   }
   Serial.println("Done! First, let's setup your PIR. Go behind your PIR, so it can't see you. In five seconds, I'll take 10 snapshots of the PIR pin.");

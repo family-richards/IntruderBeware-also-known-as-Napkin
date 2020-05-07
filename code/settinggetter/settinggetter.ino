@@ -17,7 +17,7 @@ void setup() {
   } else {
     Serial.println("Hmm... I'm having trouble.");
   }
-  Serial.println("I think you have "+String(EEPROM.read(1))+" NeoPixels.");
+  Serial.println("I think you have "+String(EEPROM.read(1))+" NeoPixels in your strip.");
   switch (EEPROM.readUShort(2)) {
     case NEO_KHZ400+NEO_RGB:
       Serial.print("I think you have V1 RGB NeoPixels.");
