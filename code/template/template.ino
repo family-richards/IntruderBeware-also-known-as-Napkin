@@ -9,7 +9,6 @@ Adafruit_NeoPixel strippy;
 
 void setup() {
   pinMode(32, OUTPUT); // set siren pin to output
-  pinMode(15, OUTPUT); // set beeper pin to output
   pinMode(27, INPUT); // set PIR pin to input
   // setup I/O config for smoke detection here
   while (!EEPROM.begin(EEPROM_SIZE)) {
@@ -71,17 +70,26 @@ bool isThereMotion() {
 
 void activateSiren() {
   for (int i = 1000; i < 2000; i += 10) {
-    tone(32, i, 20);
+    tone(32, i);
     delay(20);
   }
   for (int i = 2000; i > 1000; i -= 10) {
-    tone(32, i, 20);
+    tone(32, i);
     delay(20);
   }
+  tone(32, 0);
 }
 
 void activateBeeper() {
   // Beep on pin 15 for 500ms at 2000hz
-  tone(15, 2000, 500);
+  tone(15, 2000);
   delay(500);
+  tone(15, 0);
+  delay(500);
+}
+
+void tone(byte pin, int freq) {
+  ledcSetup(0, 2000, 8); // setup beeper
+  ledcAttachPin(pin, 0); // attach beeper
+  ledcWriteTone(0, freq); // play tone
 }
