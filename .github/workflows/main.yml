@@ -28,4 +28,20 @@ jobs:
         arduino-cli core update-index
         arduino-cli config init
         cat /home/runner/.arduino15/arduino-cli.yaml
-        curl -o 'package_esp32_index.json' 'https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json'
+        echo 'board_manager:
+          additional_urls:
+          - 'https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json'
+        daemon:
+          port: "50051"
+        directories:
+          data: /home/runner/.arduino15
+          downloads: /home/runner/.arduino15/staging
+          user: /home/runner/Arduino
+        logging:
+          file: ""
+          format: text
+          level: info
+        telemetry:
+          addr: :9090
+          enabled: false' > "/home/runner/.arduino15/arduino-cli.yaml"
+        arduino-cli core update-index
