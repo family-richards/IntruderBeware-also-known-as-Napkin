@@ -29,5 +29,5 @@ jobs:
         for INOS in $(pwd | find -print | grep ino)
         do
           echo "Compiling $INOS"
-          arduino-cli -b esp32:esp32:featheresp32 $INOS
+          arduino-cli compile -b esp32:esp32:featheresp32 $INOS
         done
