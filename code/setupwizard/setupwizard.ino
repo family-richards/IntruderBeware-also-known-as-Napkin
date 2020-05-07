@@ -147,7 +147,7 @@ void setup() {
   checkNeopix:
   while(!Serial.available());
   delay(100);
-  String firstChar = Serial.readString();
+  firstChar = Serial.readString();
   firstChar.toLowerCase();
   firstChar = String(firstChar.charAt(0));
   if (firstChar == "y") {
