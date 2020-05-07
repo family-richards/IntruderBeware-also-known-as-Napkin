@@ -8,11 +8,12 @@
 - **A siren** *speaker-based*
 - An SD card
 - NeoPixel status lights
-- A piezo warning
-  *Disclaimer: Napkin is made for people who:*
-- *Have a multimeter*
-- *Are willing to buy various things*
-- *Know how to solder*
-- *Know some Arduino/C/C++ coding and are willing to do research*
-- *Are willing to do fun projects!*
+- A piezo warning beeper
+  
+  **Disclaimer: Napkin is made for people who:**
+- **Have a multimeter *interesting tools***
+- **Are willing to buy stuff *are willing to make cool stuff and get the requirements***
+- **Know how to solder *know how to make PCBs work***
+- **Know some Arduino/C/C++ coding and be willing to do research *know how to make brains and find stuff out***
+- **Are willing to dedicate time to stuff *are willing to do fun projects!***
   [Get started now!](howto2.md)
