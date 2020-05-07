@@ -10,6 +10,8 @@
 - NeoPixel status lights
 - A piezo warning beeper
 ## [Get started now!](howto2.md)
+====
+====
   **Disclaimer: Napkin is made for people who:**
 - Have a multimeter (aka interesting tools)
 - Are willing to buy stuff (aka are willing to make cool stuff and get the requirements)
