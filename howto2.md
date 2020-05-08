@@ -25,7 +25,7 @@
 + [PIR motion sensor](https://adafru.it/189)
 + [3 IR LEDs](https://adafru.it/388)
 + [Piezo buzzer](https://adafru.it/160)
-+ Speakers with a 3-pin connection (ground, left channel, right channel.) **This is your siren! Make it loud!**
++ Speakers with a 3-pin connection (ground, left channel, right channel.) **This is your siren! Make it loud!** *You might want an amplifier.*
 + [3-pin audio jack](https://adafru.it/2791)
 + [Arducam 5MP module](https://bit.ly/2PjWdNe)
 # Soldering
@@ -45,7 +45,8 @@
 - Make sure to [install the Adafruit NeoPixel library.](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-installation)
 - Press the upload button. If you need a refresher, it looks like this: ![an arrow pointing to the right](upload.png)
 - Open the Serial Monitor. It has a button that looks like this: ![a magnifying glass](serialmonitor.png)
-- Make sure your baud rate is set to 9600 baud. There's a dropdown menu that looks like this: ![a dropdown menu with all of the baud numbers](bauddropdown.png)
+- Make sure your baud rate is set to 9600 baud. There's a dropdown menu that looks like this:  
+![a dropdown menu with all of the baud numbers](bauddropdown.png)  
 - Now, reset the ESP32 Feather to restart the sketch. I'll guide you through what it should say. *Sorry I use goto, I'm not doing bad stuff with it!*
 # Testing
 + `Welcome to the Napkin setup wizard! Wait a moment as I setup the inputs, outputs, and EEPROM...`  
