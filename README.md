@@ -1,5 +1,6 @@
 # Napkin
-  **This is WIP** This is not finished at all, mainly just an idea.
+![Test compile](https://github.com/family-richards/Napkin/workflows/Test%20compile/badge.svg)  
+  **This is WIP** This is not finished at all, mainly just an idea.  
   Napkin is an ESP32-powered DIY security system with:
 - **A camera**
 - IR LEDs
