@@ -25,7 +25,7 @@
 + [PIR motion sensor](https://adafru.it/189)
 + [3 IR LEDs](https://adafru.it/388)
 + [Piezo buzzer](https://adafru.it/160)
-+ Speakers with a 3-pin connection (ground, left channel, right channel. **This is your siren! Make it loud!**)
++ Speakers with a 3-pin connection (ground, left channel, right channel.) **This is your siren! Make it loud!**
 + [3-pin audio jack](https://adafru.it/2791)
 + [Arducam 5MP module](https://bit.ly/2PjWdNe)
 # Soldering
