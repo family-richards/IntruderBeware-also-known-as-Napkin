@@ -28,6 +28,7 @@ jobs:
         #esp32:esp32:featheresp32
         arduino-cli lib install "Adafruit NeoPixel" --additional-urls 'https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json'
         arduino-cli lib install "BLEPeripheral" --additional-urls 'https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json'
+        python -m pip install pyserial
         python3 -m pip install pyserial
     - name: Test compiling
       run: |
