@@ -42,6 +42,7 @@
 # Setup
   We can finally test everything! Plug in the ESP32 Feather to your computer. Do you immediately see the "CHG" LED rapidly blinking on the Feather? **If not, immediately yank the cord out**, and make an issue on GitHub. If it does, great! Also make sure that your computer detected it. You might need to unplug it and plug it back in to check.
 - Remember at the [very start](#testing-your-feather), you opened [`code/setupwizard/setupwizard.ino`](code/setupwizard/setupwizard.ino) with the Arduino IDE? Open that window again.
+- Make sure to [install the Adafruit NeoPixel library.](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-installation)
 - Press the upload button. If you need a refresher, it looks like this: ![an arrow pointing to the right](upload.png)
 - Open the Serial Monitor. It has a button that looks like this: ![a magnifying glass](serialmonitor.png)
 - Make sure your baud rate is set to 9600 baud. There's a dropdown menu that looks like this: ![a dropdown menu with all of the baud numbers](bauddropdown.png)
@@ -121,6 +122,7 @@ Make sure nothing is getting hot. Then, write an Arduino function to check if th
 - IO3 is IO21  
   
 **Yay! You've set up smoke detection!**  
+# Making Napkin your own
 Now, open up [code/template/template.ino](code/template/template.ino) and start coding and researching! Imagine:  
 + a night camera...
 + warning lights that are internet connected...
